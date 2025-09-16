@@ -11,9 +11,9 @@ st.subheader("📌 About WorkHub")
 st.write("""
 WorkHub is a modern freelancing platform connecting **clients** with **skilled freelancers** instantly.  
 We ensure:
-- ✅ Verified Client & Freelancer Profiles  
-- ✅ Secure Payments  
-- ✅ Ratings & Review System  
+- ✅ Verified Client & Freelancer Profiles Escpecially designed for Indian Freelancers
+- ✅ Secure Payments and faster by UPI payments
+- ✅ Ratings & Review System with many language support.  
 """)
 
 st.markdown("---")
@@ -37,6 +37,11 @@ category = st.selectbox(
     ["Frontend Developer", "Backend Developer", "AI/ML Expert", "Video Editor", "Graphic Designer", "Content Writer","Many More"]
 )
 
+pref_language = st.selectbox(
+        "Preferred Language",
+        ["English", "Hindi", "Tamil", "Haryanvi", "Telugu", "Marathi", "French", "Other"]
+)
+pref_place = st.text_input("Preferred Location (City/Country)")
 st.info(f"You selected: **{category}**")
 
 if st.button("Find Freelancers"):
@@ -50,6 +55,7 @@ with st.form("hire_form"):
     name = st.text_input("Your Name")
     project = st.text_area("Project Details")
     budget = st.number_input("Budget ($)", min_value=100, step=50)
+    location = st.text_area(" Your Prefer Location")
     submitted = st.form_submit_button("Submit")
     if submitted:
         st.success(f"Thanks {name}! We'll connect you with top freelancers for '{project}' 🚀")
