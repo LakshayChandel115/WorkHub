@@ -62,10 +62,20 @@ with st.form("hire_form"):
 
 st.markdown("---")
 
+
+
 # Testimonials
 st.subheader("⭐ Testimonials")
 st.write("💬 *'WorkHub helped me find the best developer in 24 hours!'* – Client A")
 st.write("💬 *'As a freelancer, I got my first project within 2 days of joining WorkHub.'* – Freelancer B")
+
+st.markdown("---")
+
+#Team role
+st.subheader("Team Role")
+st.write(" *Frontend* : *Vinti* , *Lakshay* ")
+st.write(" *BackEnd* : *Prachi* , *Ankit* ")
+st.write(" *Database* : *Harsh Kumar* , *Deepanshu Garg*")
 
 st.markdown("---")
 
